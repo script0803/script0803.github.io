@@ -1,1 +1,18 @@
-<h1>测试<h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raspberry Pi Camera Viewer</title>
+</head>
+<body>
+    <h1>树莓派摄像头实时查看</h1>
+    <img id="cameraImage" src="docs/latest.jpg" alt="最新图像">
+    
+    <script>
+        // 定时更新图像
+        setInterval(function() {
+            document.getElementById('cameraImage').src = 'docs/latest.jpg?' + new Date().getTime();
+        }, 1000); // 每秒更新一次
+    </script>
+</body>
+</html>
+
